@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tienda online de camisetas de fútbol: clubes, selecciones nacionales, retro y ediciones especiales. Envío a todo el mundo.">
+  <title>World Soccer Jerseys — Camisetas de Fútbol Oficiales</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <span>🚚 Envío gratis en pedidos superiores a 80€</span>
+      <div class="topbar__links">
+        <a href="#">Seguir pedido</a>
+        <a href="#">Ayuda</a>
+        <select aria-label="Moneda" class="topbar__cur">
+          <option>EUR €</option>
+          <option>USD $</option>
+          <option>GBP £</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <button class="header__burger" id="burger" aria-label="Abrir menú">☰</button>
+      <a href="index.html" class="logo">
+        <span class="logo__mark">⚽</span>
+        <span class="logo__text">World Soccer<strong>Jerseys</strong></span>
+      </a>
+
+      <form class="search" role="search" onsubmit="return false">
+        <input type="search" placeholder="Buscar por equipo, jugador o liga…" aria-label="Buscar">
+        <button type="submit" aria-label="Buscar">🔍</button>
+      </form>
+
+      <div class="header__actions">
+        <a href="#" class="header__action" aria-label="Cuenta">👤<span>Cuenta</span></a>
+        <a href="#" class="header__action" aria-label="Favoritos">❤️<span>Favoritos</span></a>
+        <button class="header__action cart-toggle" id="cartToggle" aria-label="Carrito">
+          🛒<span>Carrito</span>
+          <em class="cart-count" id="cartCount">0</em>
+        </button>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+      <div class="container nav__inner">
+        <ul class="nav__list">
+          <li><a href="#" class="nav__link nav__link--hot">🔥 Novedades</a></li>
+          <li class="has-mega">
+            <a href="#" class="nav__link">Ligas ▾</a>
+            <div class="mega">
+              <div class="mega__col"><h4>Europa</h4>
+                <a href="#">LaLiga</a><a href="#">Premier League</a><a href="#">Serie A</a><a href="#">Bundesliga</a><a href="#">Ligue 1</a>
+              </div>
+              <div class="mega__col"><h4>América</h4>
+                <a href="#">MLS</a><a href="#">Liga MX</a><a href="#">Brasileirão</a><a href="#">Liga Argentina</a>
+              </div>
+              <div class="mega__col"><h4>Competiciones</h4>
+                <a href="#">Champions League</a><a href="#">Europa League</a><a href="#">Copa Libertadores</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="#" class="nav__link">Clubes</a></li>
+          <li><a href="#" class="nav__link">Selecciones</a></li>
+          <li><a href="#" class="nav__link">Retro</a></li>
+          <li><a href="#" class="nav__link">Niños</a></li>
+          <li><a href="#" class="nav__link nav__link--sale">Ofertas</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <p class="hero__eyebrow">Temporada 2025/26</p>
+        <h1>Viste los colores<br>de tu equipo</h1>
+        <p class="hero__sub">Camisetas oficiales de clubes y selecciones. Personalización con tu nombre y dorsal. Envío a todo el mundo.</p>
+        <div class="hero__cta">
+          <a href="#catalog" class="btn btn--primary">Comprar ahora</a>
+          <a href="#" class="btn btn--ghost">Ver colección retro</a>
+        </div>
+      </div>
+      <div class="hero__art" aria-hidden="true">👕</div>
+    </div>
+  </section>
+
+  <!-- Feature strip -->
+  <section class="features container">
+    <div class="feature"><span>✅</span><div><strong>Calidad garantizada</strong><small>Tejido transpirable</small></div></div>
+    <div class="feature"><span>✏️</span><div><strong>Personalización</strong><small>Nombre y dorsal</small></div></div>
+    <div class="feature"><span>🔒</span><div><strong>Pago seguro</strong><small>SSL cifrado</small></div></div>
+    <div class="feature"><span>↩️</span><div><strong>Devoluciones</strong><small>30 días</small></div></div>
+  </section>
+
+  <!-- Category cards -->
+  <section class="cats container">
+    <h2 class="section-title">Compra por categoría</h2>
+    <div class="cats__grid">
+      <a href="#catalog" class="cat"><span class="cat__emoji">🏆</span><h3>Clubes</h3></a>
+      <a href="#catalog" class="cat"><span class="cat__emoji">🌍</span><h3>Selecciones</h3></a>
+      <a href="#catalog" class="cat"><span class="cat__emoji">🕰️</span><h3>Retro</h3></a>
+      <a href="#catalog" class="cat"><span class="cat__emoji">🧒</span><h3>Niños</h3></a>
+    </div>
+  </section>
+
+  <!-- Catalog -->
+  <section class="catalog container" id="catalog">
+    <div class="catalog__head">
+      <h2 class="section-title">Camisetas destacadas</h2>
+      <div class="filters" id="filters">
+        <button class="chip is-active" data-filter="all">Todas</button>
+        <button class="chip" data-filter="club">Clubes</button>
+        <button class="chip" data-filter="national">Selecciones</button>
+        <button class="chip" data-filter="retro">Retro</button>
+      </div>
+    </div>
+    <div class="products" id="products"><!-- JS render --></div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <div class="container newsletter__inner">
+      <div>
+        <h2>Únete al club</h2>
+        <p>Recibe ofertas exclusivas y lanzamientos antes que nadie. −10% en tu primer pedido.</p>
+      </div>
+      <form class="newsletter__form" onsubmit="return app.subscribe(event)">
+        <input type="email" placeholder="tu@email.com" required aria-label="Email">
+        <button class="btn btn--primary" type="submit">Suscribirme</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="logo logo--light"><span class="logo__mark">⚽</span><span class="logo__text">World Soccer<strong>Jerseys</strong></span></a>
+        <p>La mayor selección de camisetas de fútbol oficiales y retro. Envío mundial.</p>
+        <div class="social"><a href="#" aria-label="Instagram">📷</a><a href="#" aria-label="Facebook">📘</a><a href="#" aria-label="X">🐦</a><a href="#" aria-label="YouTube">▶️</a></div>
+      </div>
+      <div class="footer__col"><h4>Comprar</h4><a href="#">Clubes</a><a href="#">Selecciones</a><a href="#">Retro</a><a href="#">Ofertas</a></div>
+      <div class="footer__col"><h4>Ayuda</h4><a href="#">Envíos y entregas</a><a href="#">Devoluciones</a><a href="#">Guía de tallas</a><a href="#">Contacto</a></div>
+      <div class="footer__col"><h4>Empresa</h4><a href="#">Sobre nosotros</a><a href="#">Términos</a><a href="#">Privacidad</a><a href="#">Cookies</a></div>
+    </div>
+    <div class="footer__bottom container">
+      <span>© 2026 World Soccer Jerseys. Todos los derechos reservados.</span>
+      <span class="pay">💳 Visa · Mastercard · PayPal · Apple Pay</span>
+    </div>
+  </footer>
+
+  <!-- Cart drawer -->
+  <div class="drawer" id="cartDrawer" aria-hidden="true">
+    <div class="drawer__backdrop" id="drawerBackdrop"></div>
+    <aside class="drawer__panel" role="dialog" aria-label="Carrito de compra">
+      <header class="drawer__head"><h3>Tu carrito</h3><button id="cartClose" aria-label="Cerrar">✕</button></header>
+      <div class="drawer__items" id="cartItems"></div>
+      <footer class="drawer__foot">
+        <div class="drawer__total"><span>Total</span><strong id="cartTotal">0,00 €</strong></div>
+        <button class="btn btn--primary btn--block" onclick="app.checkout()">Finalizar compra</button>
+      </footer>
+    </aside>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
