@@ -1,19 +1,25 @@
 # World Soccer Jerseys ⚽
 
-Página web de venta de camisetas de fútbol (proyecto estático demo), inspirada en la estructura de tiendas de jerseys tipo *worldsoccerjerseys*.
+Tienda web de camisetas de fútbol (proyecto estático demo) replicando la
+estructura y el diseño del sitio **worldsoccerjerseys**.
 
-## Características
+## Características (fieles al original)
 
-- **Cabecera** con top-bar (envío/moneda), buscador y accesos (cuenta, favoritos, carrito).
-- **Menú de navegación** con mega-menú de Ligas (Europa, América, competiciones) y categorías: Clubes, Selecciones, Retro, Niños, Ofertas.
-- **Hero** de temporada con llamadas a la acción.
-- **Catálogo** de productos filtrable (Todas / Clubes / Selecciones / Retro) con:
-  - selector de talla (S–XXL),
-  - precios con descuento, badges (Nuevo, Retro, ofertas),
-  - camisetas dibujadas en SVG por equipo.
-- **Carrito lateral** (drawer) con persistencia en `localStorage`, cambio de cantidad y total.
-- **Newsletter** y **footer** completo con enlaces y métodos de pago.
-- Diseño **responsive** (menú hamburguesa en móvil) y accesible.
+- **Cabecera** clara con logo (balón + 3 estrellas doradas), buscador central
+  "Search for products…", selector de moneda (USD/EUR/GBP) con bandera,
+  "Track Order" e iconos verdes circulares (cuenta, favoritos, carrito con contador).
+- **Barra de navegación** con badges de liga: Home, Nation, DFL, EPL, La Liga,
+  Ligue 1, Serie A, Primeira Liga, Clothing, Others.
+- **Mega-menús** por liga con secciones **New Season / Retro / Training**
+  (o Bundesliga / 2. Bundesliga en DFL) y **escudos** de cada club generados
+  automáticamente con iniciales y color.
+- **Hero** de 3 imágenes (Inter Miami/Messi, AC Milan, Man City) con botón "Shop Now".
+- **Secciones de productos** (New Season, Retro Jersey) con barra de título,
+  tarjetas con precio en verde `$XX.XX (USD)`, selector de talla y botón "Add to Cart",
+  más "LOAD MORE PRODUCTS".
+- **Carrito lateral** con persistencia en `localStorage`, cantidades y total.
+- **Footer** azul marino con Payment System, Shipping System y Email, barra inferior de enlaces.
+- **Botón flotante de WhatsApp** y diseño **responsive** (menú hamburguesa).
 
 ## Estructura
 
@@ -21,11 +27,11 @@ Página web de venta de camisetas de fútbol (proyecto estático demo), inspirad
 index.html
 assets/
   css/styles.css
-  js/data.js    # catálogo de productos (demo)
-  js/app.js     # render, carrito, UI
+  js/data.js    # ligas, clubes y productos (demo)
+  js/app.js     # nav, mega-menús, hero, carrito, UI
 ```
 
 ## Uso
 
-Abre `index.html` en el navegador. No requiere build ni dependencias.
-Los datos de productos y pagos son de demostración.
+Abre `index.html` en el navegador. Sin build ni dependencias.
+Los escudos, productos y el pago son de demostración.
